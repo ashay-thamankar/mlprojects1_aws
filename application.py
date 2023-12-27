@@ -8,7 +8,6 @@ from src.pipeline.predict_pipeline import PredictPipeline, CustomData
 
 application = Flask(__name__)
 
-app = application
 
 ## Route for our home page
 
@@ -40,4 +39,4 @@ def predict_datapoint():
         return render_template('home.html', results= round(results[0],2))
     
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    application.run(host="0.0.0.0")
